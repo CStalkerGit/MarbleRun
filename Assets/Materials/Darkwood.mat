@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wood
+  m_Name: Darkwood
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _PARALLAXMAP
   m_LightmapFlags: 4
@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: addc8fd58a5c305449768defcbe79d8e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 25d0b49e3976e00478f44419aed10aac, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -40,19 +40,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 7ac189bc24b5462439c2ead38cedc2c3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 95eb595e187850c46980f4c751b76462, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: b79807be9802710449590cf6ed0c22fc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 525da34787c2fe746940676a55e76af6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
-        m_Texture: {fileID: 2800000, guid: 1a44b04d9ad99c141932f97b8b88cbf6, type: 3}
+        m_Texture: {fileID: 2800000, guid: 68becd459421be344972252f15436127, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
-        m_Texture: {fileID: 2800000, guid: 54089ee72aa0e344fb0c91266a58ac1e, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6bfb5019312802a42aeac1d46123b55d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
