@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class RespawnTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform RespawnPoint;
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (transform.position.y < 2.0f)
+        {
+            transform.position = RespawnPoint.position;
+        }
     }
 }
