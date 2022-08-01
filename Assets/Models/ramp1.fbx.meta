@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d20787a07c1c0a444afc1845fe89c2d8
+guid: 6ac8ec9c09702074eacf7211d9d082d5
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -9,18 +9,8 @@ ModelImporter:
     2100002: wood
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Track1
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: darkwood
-    second: {fileID: 2100000, guid: b4abf24c0fbabad47b801570b3afd9fb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: wood
-    second: {fileID: 2100000, guid: 14377ba05a813044a8f887bac6d60a59, type: 2}
+    4300000: Ramp1
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
