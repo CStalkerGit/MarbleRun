@@ -49,13 +49,10 @@ public class RigidbodyController : MonoBehaviour
         // clamp max speed
         if (rb.velocity.x > moveSpeed) rb.velocity = new Vector3(moveSpeed, rb.velocity.y, rb.velocity.z);
 
-        var colliders = Physics.OverlapSphere(transform.position - new Vector3(0, 0.1f, 0), sphereCollider.radius);
+        RaycastHit hit;
+        Physics.Raycast(transform.position, Vector3.down, out hit, sphereCollider.radius + 0.1f);
 
-        string names = "";
-        foreach (var e in colliders)
-            names += " " + e.name;
-
-        IsGrounded = colliders.Length > 1;
-        if (textDebug) textDebug.text = names;
+        IsGrounded = hit.collider;
+        if (textDebug && hit.collider) textDebug.text = hit.collider.name;
     }
 }
