@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: 6ac8ec9c09702074eacf7211d9d082d5
+guid: c5ab7a4ebcac78f4f99ffb58c36c93bd
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: darkwood
-    2100002: wood
+    2100000: Metal
+    2100002: darkwood
+    2100004: wood
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Ramp1
+    4300000: Ramp3
   externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 1b58a8cd0f9167343ae09046215bf73b, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

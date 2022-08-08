@@ -13,7 +13,6 @@ public class Coin : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Test");
         transform.Rotate(0, 150 * Time.deltaTime, 0);
     }
 
