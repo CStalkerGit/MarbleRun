@@ -4,14 +4,8 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
-    public Transform RespawnPoint;
-
-    void OnTriggerEnter(Collider other)
+    private void Start()
     {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            var trigger = other.GetComponent<RespawnTrigger>();
-            if (trigger) trigger.RespawnPoint = RespawnPoint;
-        }
+        Engine.AddCheckpoint(transform);
     }
 }

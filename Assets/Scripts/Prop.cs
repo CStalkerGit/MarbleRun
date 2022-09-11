@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class Prop : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void FixedUpdate()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (transform.position.y < -10.0f) Destroy(gameObject);
     }
 }

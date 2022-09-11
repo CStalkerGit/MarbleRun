@@ -12,10 +12,16 @@ public class Engine : MonoBehaviour
     float coinScale = 1;
     const float maxScale = 1.5f;
 
+    SortedList<float, Transform> checkpoints = new SortedList<float, Transform>();
+
+    public Engine()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        instance = this;
         UpdateText();
     }
 
@@ -38,8 +44,29 @@ public class Engine : MonoBehaviour
         AudioSource.PlayClipAtPoint(instance.sndCoin, pos, 1.0f);
     }
 
+    public static void AddCheckpoint(Transform checkpoint)
+    {
+        instance.checkpoints.Add(checkpoint.position.x, checkpoint);
+    }
+
+    public static void UpdateRespawnPoint(Vector3 playerPos, ref Transform lastCheckpoint)
+    {
+        if (instance.checkpoints.Count == 0) return;
+
+        if (playerPos.x > instance.checkpoints.Keys[0] || lastCheckpoint == null)
+        {
+            lastCheckpoint = instance.checkpoints.Values[0];
+            instance.checkpoints.RemoveAt(0);
+        }
+    }
+
     void UpdateText()
     {
         textCoins.text = "Coins: " + Data.Coins.ToString();
+    }
+
+    public void Restart()
+    {
+        Data.Restart();
     }
 }

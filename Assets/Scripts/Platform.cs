@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public bool Moving;
-    public bool Rotating;
+    public bool Moving = true;
+    public bool Rotating = false;
+    public float axisX = 0;
+    public float axisY = 35;
+    public float axisZ = 0;
+    public float movingSpeed = 5;
 
     bool movingLeft;
     float maxZ = 1;
@@ -19,11 +23,13 @@ public class Platform : MonoBehaviour
 
     void Update()
     {
-        if (Rotating) transform.Rotate(0, 50 * Time.deltaTime, 0);
+        if (Rotating)
+            transform.Rotate(axisX * Time.deltaTime, axisY * Time.deltaTime, axisZ * Time.deltaTime);
+
         if (Moving)
         {
             var pos = transform.position;
-            var length = 5 * Time.deltaTime;
+            var length = movingSpeed * Time.deltaTime;
             if (movingLeft)
             {
                 pos.z -= length;

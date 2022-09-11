@@ -5,14 +5,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class RespawnTrigger : MonoBehaviour
 {
-    public Transform RespawnPoint;
+    Transform lastCheckpoint;
 
     void FixedUpdate()
     {
-        if (transform.position.y < -2.0f && RespawnPoint)
+        if (transform.position.y < -5.0f && lastCheckpoint)
         {
-            transform.position = RespawnPoint.position;
-            GetComponent<Rigidbody>().velocity = Vector3.zero;
+            transform.position = lastCheckpoint.position;
+            var rb = GetComponent<Rigidbody>();
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
         }
+
+        Engine.UpdateRespawnPoint(transform.position, ref lastCheckpoint);
     }
 }
